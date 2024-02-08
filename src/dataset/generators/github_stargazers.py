@@ -36,13 +36,11 @@ class GithubStargazersGenerator(Generator):
 
         self.context.logger.info(f"Generating {len(filtered)} graphs")
         for iteration, graph_id in enumerate(graph_ids[filtered], start=1):
-
             if iteration % 200 == 0:
                 self.context.logger.info(f"Generating graph {iteration} with id {graph_id}")
 
-            # Filter for the edges of the currnent graph
-            node_count = node_counts[graph_id]
-            graph_edges = edges[np.isin(edges, node_count).any(axis=1)]
+            graph_nodes = np.where(graph_indicator == graph_id)[0] + 1 # Add one to make up for the 0th index
+            graph_edges = edges[np.isin(edges, graph_nodes).any(axis=1)]
 
             G = nx.Graph()
             G.add_edges_from(graph_edges)
