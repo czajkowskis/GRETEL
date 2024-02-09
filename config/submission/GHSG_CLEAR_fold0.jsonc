@@ -11,8 +11,8 @@
         }
     },
 
-    "do-pairs": [ { "compose_ghsg_gcn": "config/submission/snippets/GHSG_do-pairs.jsonc" } ],
-    "explainers": [ { "class": "src.explainer.generative.clear.CLEARExplainer", "parameters": { "epochs": 1 } } ],
+    "do-pairs": [ { "compose_ghsg_gcn": "config/submission/snippets/do-pairs/GHSG.jsonc" } ],
+    "explainers": [ { "compose_explainer": "config/submission/snippets/explainers/GHSG_CLEAR.jsonc" } ],
     "compose_mes": "config/snippets/default_metrics.json",
     "compose_strs": "config/snippets/default_store_paths.json"
 }
