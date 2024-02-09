@@ -1,4 +1,0 @@
-{
-    "class": "src.explainer.heuristic.obs.ObliviousBidirectionalSearchExplainer",
-    "parameters": { "fold_id": 0 }
-}
