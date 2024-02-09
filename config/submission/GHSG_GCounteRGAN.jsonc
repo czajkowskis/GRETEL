@@ -11,7 +11,7 @@
         }
     },
 
-    "do-pairs": [ { "compose_ghsg_gcn": "config/testing/snippets/GHSG_do-pairs.jsonc" } ],
+    "do-pairs": [ { "compose_ghsg_gcn": "config/submission/snippets/GHSG_do-pairs.jsonc" } ],
     "explainers": [ { "class": "src.explainer.generative.gcountergan.GCounteRGAN", "parameters": { "epochs": 150 } } ],
     "compose_mes": "config/snippets/default_metrics.json",
     "compose_strs": "config/snippets/default_store_paths.json"
